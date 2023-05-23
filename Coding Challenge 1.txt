@@ -1,0 +1,23 @@
+let arr = [],temp = [],sortedArray = [];
+let row = prompt("Enter number of rows: ");
+let col = prompt("Enter number of columns: ");
+console.log("Enter array elements: ");
+for(let i=0;i<row;i++)
+{
+    arr[i] = [];
+    temp = prompt("").split(" ");
+    for(let j=0;j<col;j++)
+    {
+        arr[i][j] = parseInt(temp[j]);
+    }
+}
+sortedArray = arr.flat().filter(i => {
+    return !isNaN(i);
+});
+
+sortedArray.sort();
+
+console.log("Given 2-D Array: ");
+console.log(arr);
+console.log("Sorted Array: ");
+console.log(sortedArray);

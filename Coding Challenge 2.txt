@@ -1,0 +1,14 @@
+let arr = [{"a": 1,"b": 3},{"a": 3,"b": 2},{"a": 2,"b": 40},{"a": 4,"b": 12}];
+console.log(arr);
+let input = prompt("Sort by which property a/b: ");
+switch(input){
+    case 'a': {
+    arr.sort((i,j) => i.a - j.a).reverse();
+    break;
+    }
+    case 'b': {
+    arr.sort((i,j) => i.b - j.b).reverse();
+    break;
+    }
+}
+console.log(arr);
